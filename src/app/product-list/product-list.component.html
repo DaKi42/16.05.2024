@@ -1,0 +1,9 @@
+<h2>Список товаров</h2>
+
+<input type="text" placeholder="Поиск по названию" (input)="filterProducts($event)">
+
+<ul>
+  <li *ngFor="let product of filteredProducts">{{ product }}</li>
+</ul>
+
+<p *ngIf="filteredProducts.length === 0">Товары не найдены</p>
